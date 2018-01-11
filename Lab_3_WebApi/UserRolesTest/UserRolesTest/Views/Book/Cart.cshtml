@@ -1,0 +1,55 @@
+﻿
+@model IEnumerable<WorkWithEntity.Book>
+
+@{
+    ViewBag.Title = "Cart";
+}
+
+<h2>Cart</h2>
+
+<p>
+    <strong>@Html.ActionLink("CHECK OUT", "CheckOut")</strong>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Photo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Pages)
+        </th>        
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @if (item.Photo != null && item.Photo.Length > 0)
+                {
+                    <img src="data:image/jpeg;base64, @Convert.ToBase64String(item.Photo)" width="50" />
+                }
+                else
+                {
+                    @Html.DisplayFor(modelItem => item.Photo)
+                }
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pages)
+            </td>           
+            <td>               
+                @Html.ActionLink("Remove", "RemoveCartItem", new { id = item.BookId })                 
+            </td>
+        </tr>
+    }
+</table>
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

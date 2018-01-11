@@ -1,0 +1,55 @@
+﻿@{ 
+    ViewBag.Title = "Sages";
+}
+
+<div ng-app="myApp" ng-controller="SageCtrl" ng-cloak>
+      <br>
+    <h3>
+        Sages
+    </h3>
+    <hr>
+    <div class="form-actions no-color">        
+        <input type="text" name="name" placeholder="Sage name" ng-model="nameAuthor" />
+        <input type="number" name="name" placeholder="Sage age" ng-model="ageAuthor" />
+        <button class="btn btn-default" ng-click="sendData()">Create</button>
+    </div>    
+      <br>
+    
+    <table class="col-lg-12 table table-bordered table-striped" style="display:none;">
+        <thead>
+            <tr>                
+                <th>                    
+                    id                                      
+                </th>               
+                <th>
+                    Name
+                </th>
+                <th>
+                    Age
+                </th>
+               <th>
+                   Books
+               </th>
+                <th>Actions</th>               
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="user in data" ng-cloak ng-show="user.SageId">
+                
+                <td>{{user.SageId}}</td>
+                <td>
+                {{user.Name}}
+                </td>
+                
+                <td>{{user.Age}}</td>               
+                <td><span ng-repeat="book in user.Books">{{book.Name}}<br></span></td>
+                <td>
+                    <span class="btn btn-danger" ng-click="deleteUser(user.SageId)">Delete</span>
+                    <span class="btn btn-info" ng-click="updateUser(user.SageId)">Update</span>
+                </td>               
+               
+            </tr>
+        </tbody>
+    </table>
+</div>

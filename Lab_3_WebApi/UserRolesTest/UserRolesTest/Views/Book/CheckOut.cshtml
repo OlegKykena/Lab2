@@ -1,0 +1,88 @@
+﻿@model WorkWithEntity.Client
+@using WorkWithEntity;
+
+@{
+    ViewBag.Title = "Info";
+    List<Book> bks = Session["sessionString"] as List<Book>;
+}
+
+
+
+@using (Html.BeginForm("CheckOut", "Book", FormMethod.Post)) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h2>Info</h2>
+        <hr />        
+        <div class="form-group">
+            @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Address, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Address, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <br>
+        <h2>Products list</h2>
+        <table class="table">
+            <tr>
+                <th></th>                
+                <th>
+                    @Html.DisplayNameFor(bk => bks.FirstOrDefault().Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(bk => bks.FirstOrDefault().Pages)
+                </th>                
+            </tr>
+
+            @foreach (var item in bks)
+            {
+                <tr>
+                    <td>
+                        @if (item.Photo != null && item.Photo.Length > 0)
+                        {
+                            <img src="data:image/jpeg;base64, @Convert.ToBase64String(item.Photo)" width="50"/>
+                        }
+                        else
+                        {
+                            @Html.DisplayFor(modelItem => item.Photo)
+                        }
+                    </td>                    
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Pages)
+                    </td>                    
+                </tr>
+            }
+        </table>
+
+
+        <div class="form-group">
+            <div class="col-md-offset-0 col-md-10">
+                <input type="submit" value="Submit" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to Shop", "Index")
+</div>
