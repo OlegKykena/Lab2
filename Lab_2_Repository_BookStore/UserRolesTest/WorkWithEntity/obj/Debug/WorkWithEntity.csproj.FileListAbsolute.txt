@@ -1,0 +1,14 @@
+C:\Users\okyk\Downloads\Web_Labs_LessWeight\Lab_2_Repository_BookStore\UserRolesTest\WorkWithEntity\bin\Debug\WorkWithEntity.dll.config
+C:\Users\okyk\Downloads\Web_Labs_LessWeight\Lab_2_Repository_BookStore\UserRolesTest\WorkWithEntity\bin\Debug\WorkWithEntity.dll
+C:\Users\okyk\Downloads\Web_Labs_LessWeight\Lab_2_Repository_BookStore\UserRolesTest\WorkWithEntity\bin\Debug\WorkWithEntity.pdb
+C:\Users\okyk\Downloads\Web_Labs_LessWeight\Lab_2_Repository_BookStore\UserRolesTest\WorkWithEntity\bin\Debug\EntityFramework.dll
+C:\Users\okyk\Downloads\Web_Labs_LessWeight\Lab_2_Repository_BookStore\UserRolesTest\WorkWithEntity\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\okyk\Downloads\Web_Labs_LessWeight\Lab_2_Repository_BookStore\UserRolesTest\WorkWithEntity\bin\Debug\Repository.dll
+C:\Users\okyk\Downloads\Web_Labs_LessWeight\Lab_2_Repository_BookStore\UserRolesTest\WorkWithEntity\bin\Debug\Repository.pdb
+C:\Users\okyk\Downloads\Web_Labs_LessWeight\Lab_2_Repository_BookStore\UserRolesTest\WorkWithEntity\bin\Debug\Repository.dll.config
+C:\Users\okyk\Downloads\Web_Labs_LessWeight\Lab_2_Repository_BookStore\UserRolesTest\WorkWithEntity\bin\Debug\EntityFramework.xml
+C:\Users\okyk\Downloads\Web_Labs_LessWeight\Lab_2_Repository_BookStore\UserRolesTest\WorkWithEntity\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\okyk\Downloads\Web_Labs_LessWeight\Lab_2_Repository_BookStore\UserRolesTest\WorkWithEntity\obj\Debug\WorkWithEntity.csprojResolveAssemblyReference.cache
+C:\Users\okyk\Downloads\Web_Labs_LessWeight\Lab_2_Repository_BookStore\UserRolesTest\WorkWithEntity\obj\Debug\WorkWithEntity.csproj.CoreCompileInputs.cache
+C:\Users\okyk\Downloads\Web_Labs_LessWeight\Lab_2_Repository_BookStore\UserRolesTest\WorkWithEntity\obj\Debug\WorkWithEntity.dll
+C:\Users\okyk\Downloads\Web_Labs_LessWeight\Lab_2_Repository_BookStore\UserRolesTest\WorkWithEntity\obj\Debug\WorkWithEntity.pdb
